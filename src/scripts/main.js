@@ -30,7 +30,8 @@ function createTree(element, data) {
     if (
       typeof data[key] === 'object' &&
       data[key] !== null &&
-      !Array.isArray(data[key])
+      !Array.isArray(data[key]) &&
+      Object.keys(data[key]).length === 0
     ) {
       const ul = document.createElement('ul');
 
